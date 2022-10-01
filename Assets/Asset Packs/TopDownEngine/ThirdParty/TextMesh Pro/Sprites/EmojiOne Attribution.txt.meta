@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 5a06b698b8fbc7a489469de5e80a6eff
+=======
+guid: 249d6d082ca29b347913ef9cdc2ce684
+>>>>>>> davidBranch
 TextScriptImporter:
   externalObjects: {}
   userData: 

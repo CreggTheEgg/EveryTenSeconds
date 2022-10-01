@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d078c55b55b850148949fd9d430852f6
+=======
+guid: 3d827e8c2f969ad4bb21a3bb2ee518ac
+>>>>>>> davidBranch
 ShaderImporter:
   defaultTextures: []
   userData: 

@@ -18,15 +18,15 @@ public class CountDown : MonoBehaviour
     {
         if (TimerOn)
         {
-            if (TimeLeft > 0)
+            if (TimeLeft > -1)
             {
                 TimeLeft -= Time.deltaTime; // subtracts
                 updateTimer(TimeLeft);
             }
             else
             {
-                TimeLeft = 0;
-                TimerOn = false;
+                TimeLeft = 10;
+                updateTimer(TimeLeft);
             }
         }
     }
@@ -35,9 +35,8 @@ public class CountDown : MonoBehaviour
     {
         currentTime += 1;
 
-        float minutes = Mathf.FloorToInt(currentTime / 60);
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
-        TimerTxt.text = string.Format("{0:00} : {1:00}", minutes, seconds); // first slot is for minutes, 2nd is for seconds
+        TimerTxt.text = string.Format("{0:00} ", seconds); // first slot is for minutes, 2nd is for seconds
     }
 }

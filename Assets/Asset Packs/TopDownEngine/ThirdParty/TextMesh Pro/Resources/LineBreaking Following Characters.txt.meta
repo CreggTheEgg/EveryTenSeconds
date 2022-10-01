@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 6392b36fd87fa604cb5579cb36c48355
+=======
+guid: 42c28e724d60538429aa173089ce9639
+>>>>>>> davidBranch
 timeCreated: 1425440388
 licenseType: Store
 TextScriptImporter:

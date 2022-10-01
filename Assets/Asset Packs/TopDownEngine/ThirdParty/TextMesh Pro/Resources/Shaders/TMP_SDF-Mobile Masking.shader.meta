@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 2f621f239bd8bc4449fa075d62e6827b
+=======
+guid: 04ff1cfe3da01b84ca5c28de1ddd1641
+>>>>>>> davidBranch
 timeCreated: 1463704911
 licenseType: Store
 ShaderImporter:

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 11dfe85bdbf0d744e9b413c35e63326a
+=======
+guid: 7339266e4e760924bbb6f13460d109ca
+>>>>>>> davidBranch
 timeCreated: 1484171803
 licenseType: Store
 NativeFormatImporter:
