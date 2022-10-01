@@ -199,7 +199,8 @@ namespace MoreMountains.TopDownEngine
       }
       if (CharacterRotationAuthorized)
       {
-        //RotateToFaceMovementDirection();
+        
+        RotateToFaceMovementDirection();
         RotateToFaceWeaponDirection();
         RotateModel();
       }
