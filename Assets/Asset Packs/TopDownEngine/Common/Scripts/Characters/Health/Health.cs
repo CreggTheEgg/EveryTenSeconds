@@ -783,8 +783,8 @@ namespace MoreMountains.TopDownEngine
       else
       {
         // finally we destroy the object
-        //DestroyObject(); - deprecated
-        Destroy(gameObject);
+        DestroyObject();
+        //Destroy(gameObject);
 
       }
     }
@@ -879,6 +879,7 @@ namespace MoreMountains.TopDownEngine
         if (DestroyOnDeath)
         {
           gameObject.SetActive(false);
+          Destroy(gameObject);
         }
       }
       else
