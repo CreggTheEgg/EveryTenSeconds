@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Spells", menuName = "Spells/Spell")]
-public class SpellData : ScriptableObject
+[CreateAssetMenu(fileName = "Weapon", menuName = "Weapons/Weapon")]
+public class WeaponData : ScriptableObject
 {
   [Header("Info")]
   public new string name;
-  public GameObject spellObject;
 
   [Header("Shooting")]
   public float damage;
