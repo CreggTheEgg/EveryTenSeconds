@@ -100,6 +100,10 @@ namespace MoreMountains.TopDownEngine
     /// whether or not this object should get destroyed on death
     [Tooltip("whether or not this object should get destroyed on death")]
     public bool DestroyOnDeath = true;
+    /// whether or not this object should stop weapon swap timer on death
+    [Tooltip("whether or not this object should stop weapon swap timer on death")]
+    public bool StopTimerOnDeath = false;
+
     /// the time (in seconds) before the character is destroyed or disabled
     [Tooltip("the time (in seconds) before the character is destroyed or disabled")]
     public float DelayBeforeDestruction = 0f;
@@ -878,6 +882,7 @@ namespace MoreMountains.TopDownEngine
       {
         if (DestroyOnDeath)
         {
+          //STOP TIMER
           gameObject.SetActive(false);
           Destroy(gameObject);
         }
@@ -885,6 +890,14 @@ namespace MoreMountains.TopDownEngine
       else
       {
         _autoRespawn.Kill();
+      }
+    }
+
+    private void StopWeaponSwapTimer()
+    {
+      if (StopTimerOnDeath)
+      {
+
       }
     }
 

@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using MoreMountains.TopDownEngine;
 
 public class CountDown : MonoBehaviour
 {
@@ -13,10 +14,17 @@ public class CountDown : MonoBehaviour
 
   public static Action swapWeaponAction;
 
+  public GameObject playerInScene;
+
   void Start()
   {
     timerOn = true; // turns timer on at start of game
     timeLeft = 10f;
+  }
+
+  void Update()
+  {
+    playerInScene = GameObject.Find("Player Character");
   }
 
   void FixedUpdate()
@@ -27,6 +35,10 @@ public class CountDown : MonoBehaviour
       {
         timeLeft -= Time.deltaTime; // subtracts
         UpdateTimer(timeLeft);
+      }
+      else if (playerInScene == null)
+      {
+        timerOn = false;
       }
       else
       {
