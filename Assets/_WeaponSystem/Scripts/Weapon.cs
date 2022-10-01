@@ -5,20 +5,11 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
   [Header("References")]
-
   public WeaponData weaponData;
 
   private void Start()
   {
-    // PlayerAttack.attackInput += Attack;
-    // PlayerAttack.swapWeaponAction += SwapWeaponData;
-  }
-
-  public void Attack()
-  {
-    //Check if can attack
-    //Perform weapon attack
-    //OnWeaponShot(); - use this for particles/sounds/lights
+    PlayerActions.attackInput = FireWeapon;
   }
 
   private void Update()
@@ -26,9 +17,23 @@ public class Weapon : MonoBehaviour
 
   }
 
-  private void OnWeaponShot()
+  public void SwingWeapon()
   {
 
   }
 
+  public void FireWeapon()
+  {
+    if (weaponData.isProjectile)
+    {
+      GameObject newProjectile = Instantiate(weaponData.projectile, transform.position, Quaternion.identity);
+      Rigidbody projectileRb = newProjectile.GetComponent<Rigidbody>();
+
+      Vector3 forceToAdd = transform.forward * weaponData.throwForce + transform.up * weaponData.throwUpwardForce + projectileRb.velocity;
+
+      projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
+    }
+
+    Debug.Log("Weapon Fired");
+  }
 }

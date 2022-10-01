@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerActions : MonoBehaviour
 {
-  // public static Action swapWeaponAction;
+  public static Action attackInput;
 
   public GameObject itemHolder;
 
@@ -14,17 +14,16 @@ public class PlayerActions : MonoBehaviour
 
   private GameObject newWeapon;
 
-  public CountDown cdTimer;
-
   private void Start()
   {
-    newWeapon = Instantiate(weapons[0], itemHolder.transform.position, Quaternion.identity);
+    SpawnNewWeapon();
 
     CountDown.swapWeaponAction += SpawnNewWeapon;
   }
 
   private void Update()
   {
+    newWeapon.transform.parent = itemHolder.transform;
     // currentWeapon = newWeapon;
 
     // test weapon swap with keybind for quick testing
@@ -33,15 +32,18 @@ public class PlayerActions : MonoBehaviour
       SpawnNewWeapon();
     }
 
-
-
-    newWeapon.transform.parent = itemHolder.transform;
+    // Player input to attack with weapon
+    if (Input.GetMouseButtonDown(0))
+    {
+      attackInput?.Invoke();
+      Debug.Log("Player attack input");
+    }
   }
 
   private void SpawnNewWeapon()
   {
     Destroy(newWeapon);
-    newWeapon = Instantiate(weapons[UnityEngine.Random.Range(0, weapons.Count)], itemHolder.transform.position, Quaternion.identity);
+    newWeapon = Instantiate(weapons[UnityEngine.Random.Range(0, weapons.Count)], itemHolder.transform.position, itemHolder.transform.rotation);
     // swapWeaponAction?.Invoke();
   }
 }
