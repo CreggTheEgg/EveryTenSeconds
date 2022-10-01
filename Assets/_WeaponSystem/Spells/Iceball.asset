@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbbf67a9e86e9344dbd27de0fbf703a8, type: 3}
+  m_Name: Iceball
+  m_EditorClassIdentifier: 
+  name: Iceball
+  spellObject: {fileID: 1250712095411053283, guid: ba4e4bddc30bb6e4aa4589acd0656aad,
+    type: 3}
+  damage: 0
+  maxDistance: 0
+  currentAmmo: 0
+  magSize: 0
+  fireRate: 0
+  reloadTime: 0
+  reloading: 0
