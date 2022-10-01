@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbbf67a9e86e9344dbd27de0fbf703a8, type: 3}
-  m_Name: Iceball
+  m_Name: Nothing
   m_EditorClassIdentifier: 
-  name: Iceball
-  isMelee: 0
-  isProjectile: 1
+  name: Staff
+  isMelee: 1
+  isProjectile: 0
   damage: 0
   maxDistance: 0
-  throwForce: 40
+  throwForce: 0
   throwUpwardForce: 0
   currentAmmo: 0
   magSize: 0
   fireRate: 0
   reloadTime: 0
-  projectile: {fileID: 6718014695335179221, guid: 00983e9782dec9943a7d670bc61173a3,
-    type: 3}
+  projectile: {fileID: 0}
   reloading: 0
+  img: {fileID: 21300000, guid: 71f2a9c550482ca449010180d8d9fe8c, type: 3}

@@ -26,3 +26,4 @@ MonoBehaviour:
   projectile: {fileID: 6718014695335179221, guid: 681cfc6524d92584b8d79c20a4887a62,
     type: 3}
   reloading: 0
+  img: {fileID: 21300000, guid: fc5d0a105f136b342811b98be6bd089e, type: 3}

@@ -17,9 +17,12 @@ MonoBehaviour:
   isProjectile: 0
   damage: 0
   maxDistance: 0
+  throwForce: 0
+  throwUpwardForce: 0
   currentAmmo: 0
   magSize: 0
   fireRate: 0
   reloadTime: 0
   projectile: {fileID: 0}
   reloading: 0
+  img: {fileID: 21300000, guid: 9e9084ddaa1a3884e9716fe9d8053754, type: 3}

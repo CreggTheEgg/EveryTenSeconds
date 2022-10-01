@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "Weapon", menuName = "Weapons/Weapon")]
 public class WeaponData : ScriptableObject
@@ -29,6 +28,6 @@ public class WeaponData : ScriptableObject
   [HideInInspector]
   public bool reloading;
 
-  [Header("Image")]
-  public Image img;
+  [Header("Sprite")]
+  public Sprite img;
 }

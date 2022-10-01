@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbbf67a9e86e9344dbd27de0fbf703a8, type: 3}
-  m_Name: PoisonBall
+  m_Name: Spear
   m_EditorClassIdentifier: 
-  name: Poisonball
-  isMelee: 0
-  isProjectile: 1
+  name: Staff
+  isMelee: 1
+  isProjectile: 0
   damage: 0
   maxDistance: 0
-  throwForce: 3.2
-  throwUpwardForce: 20
+  throwForce: 0
+  throwUpwardForce: 0
   currentAmmo: 0
   magSize: 0
   fireRate: 0
   reloadTime: 0
-  projectile: {fileID: 6718014695335179221, guid: c70b9b745b1ad554f8a7c99d96a0b4c8,
-    type: 3}
+  projectile: {fileID: 0}
   reloading: 0
-  img: {fileID: 21300000, guid: 5657e0d46648bb34795735af9b801a97, type: 3}
+  img: {fileID: 21300000, guid: ff2c186cfb01c4242b60a34fa3d7bcc1, type: 3}
