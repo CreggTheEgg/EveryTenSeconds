@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 6e59c59b81ab47f9b6ec5781fa725d2c
+<<<<<<< HEAD
+guid: 13e72b81a2017f447bd0439fd20b61b2
+=======
+guid: e8fe15d90eb6fa04394935a1468108ea
+>>>>>>> davidBranch
 timeCreated: 1484171296
 licenseType: Store
 TextScriptImporter:

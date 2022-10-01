@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 4aecb92fff08436c8303b10eab8da368
+<<<<<<< HEAD
+guid: 8936cb96de953234e96f90fe56201129
+=======
+guid: e10d7d3f68da8cb469e5de7dec1648da
+>>>>>>> davidBranch
 folderAsset: yes
 timeCreated: 1441876950
 licenseType: Store
