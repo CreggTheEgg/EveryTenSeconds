@@ -16,8 +16,7 @@ public class PlayerActions : MonoBehaviour
 
   private void Start()
   {
-    SpawnNewWeapon();
-
+    newWeapon = Instantiate(weapons[UnityEngine.Random.Range(0, weapons.Count)], itemHolder.transform.position, itemHolder.transform.rotation);
     CountDown.swapWeaponAction += SpawnNewWeapon;
   }
 
@@ -39,7 +38,6 @@ public class PlayerActions : MonoBehaviour
       Debug.Log("Player attack input");
     }
   }
-
   private void SpawnNewWeapon()
   {
     Destroy(newWeapon);
