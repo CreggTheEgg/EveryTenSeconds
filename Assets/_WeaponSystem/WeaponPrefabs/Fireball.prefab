@@ -143,4 +143,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 796cbe34c0a20304fb400542f4abf577, type: 2}
-  playerActions: {fileID: 0}
