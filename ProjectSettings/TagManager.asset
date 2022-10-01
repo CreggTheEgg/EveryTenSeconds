@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - World
   - NoMask
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX
