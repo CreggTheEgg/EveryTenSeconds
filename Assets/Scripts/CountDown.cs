@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -5,38 +6,43 @@ using TMPro;
 public class CountDown : MonoBehaviour
 {
 
-    [SerializeField] public float TimeLeft;
-    public bool TimerOn = false;
+  [SerializeField] public float timeLeft;
+  public bool timerOn = false;
 
-    public TMP_Text TimerTxt;
-    void Start()
+  public TMP_Text TimerTxt;
+
+  public static Action swapWeaponAction;
+
+  void Start()
+  {
+    timerOn = true; // turns timer on at start of game
+    timeLeft = 10f;
+  }
+
+  void FixedUpdate()
+  {
+    if (timerOn)
     {
-        TimerOn = true; // turns timer on at start of game
+      if (timeLeft >= 0f)
+      {
+        timeLeft -= Time.deltaTime; // subtracts
+        UpdateTimer(timeLeft);
+      }
+      else
+      {
+        swapWeaponAction?.Invoke();
+        timeLeft = 10f;
+        // updateTimer(timeLeft); - above if statement handles the UpdateTimer method if is above 0 so just set timer to 10
+      }
     }
+  }
 
-    void FixedUpdate()
-    {
-        if (TimerOn)
-        {
-            if (TimeLeft > -1)
-            {
-                TimeLeft -= Time.deltaTime; // subtracts
-                updateTimer(TimeLeft);
-            }
-            else
-            {
-                TimeLeft = 10;
-                updateTimer(TimeLeft);
-            }
-        }
-    }
+  void UpdateTimer(float currentTime)
+  {
+    currentTime += 1f;
 
-    void updateTimer(float currentTime)
-    {
-        currentTime += 1;
+    float seconds = Mathf.FloorToInt(currentTime % 60f);
 
-        float seconds = Mathf.FloorToInt(currentTime % 60);
-
-        TimerTxt.text = string.Format("{0:00} ", seconds); // first slot is for minutes, 2nd is for seconds
-    }
+    TimerTxt.text = string.Format("{00:00} ", seconds); // first slot is for minutes, 2nd is for seconds
+  }
 }
