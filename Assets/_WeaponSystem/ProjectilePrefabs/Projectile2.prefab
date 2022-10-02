@@ -4985,7 +4985,7 @@ MonoBehaviour:
   DamageCausedKnockbackType: 1
   DamageCausedKnockbackDirection: 0
   DamageCausedKnockbackForce: {x: 0, y: 0, z: 10}
-  InvincibilityDuration: 0.5
+  InvincibilityDuration: 0.1
   RepeatDamageOverTime: 0
   AmountOfRepeats: 3
   DurationBetweenRepeats: 1
