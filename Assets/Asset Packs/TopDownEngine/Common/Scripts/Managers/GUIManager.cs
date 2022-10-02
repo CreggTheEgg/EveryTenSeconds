@@ -18,6 +18,9 @@ namespace MoreMountains.TopDownEngine
 		/// the game object that contains the heads up display (avatar, health, points...)
 		[Tooltip("the game object that contains the heads up display (avatar, health, points...)")]
 		public GameObject HUD;
+		/// the game object that contains the weapon heads up display
+		[Tooltip("the game object that contains the weapon heads up display")]
+		public GameObject WeaponHUD;
 		/// the health bars to update
 		[Tooltip("the health bars to update")]
 		public MMProgressBar[] HealthBars;
@@ -329,6 +332,12 @@ namespace MoreMountains.TopDownEngine
 					ammoDisplay.UpdateAmmoDisplays (magazineBased, totalAmmo, maxAmmo, ammoInMagazine, magazineSize, displayTotal);
 				}    
 			}
+		}
+
+		public virtual void UpdateWeaponDisplay(Sprite currentWeapon, Sprite nextWeapon){
+			Image[] images = WeaponHUD.GetComponentsInChildren<Image>();
+			images[0].sprite = currentWeapon;
+			images[1].sprite = nextWeapon;
 		}
 	}
 }

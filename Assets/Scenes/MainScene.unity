@@ -3267,7 +3267,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.8902777, y: 1}
+    m_SensorSize: {x: 1.9815725, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4797,6 +4797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainCanvas: {fileID: 223698243153083637}
   HUD: {fileID: 1663800523820937}
+  WeaponHUD: {fileID: 1690094744}
   HealthBars:
   - {fileID: 114677894824837219}
   DashBars:
