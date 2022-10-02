@@ -5992,6 +5992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainCanvas: {fileID: 223698243153083637}
   HUD: {fileID: 1663800523820937}
+  WeaponHUD: {fileID: 1690094744}
   HealthBars:
   - {fileID: 114677894824837219}
   DashBars:
