@@ -34,6 +34,19 @@ public class Weapon : MonoBehaviour
       projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
     }
 
-    Debug.Log("Weapon Fired");
+    if (weaponData.isMelee)
+    {
+      StartCoroutine(SwingSword());
+    }
+  }
+
+  IEnumerator SwingSword()
+  {
+    if (gameObject.GetComponent<Animator>() != null)
+    {
+      gameObject.GetComponent<Animator>().Play("SwingSword");
+      yield return new WaitForSeconds(1f);
+      gameObject.GetComponent<Animator>().Play("SwordIdle");
+    }
   }
 }
