@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MoreMountains.TopDownEngine;
 
 public class PlayerActions : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class PlayerActions : MonoBehaviour
 
   private void Start()
   {
-    newWeapon = Instantiate(weapons[UnityEngine.Random.Range(0, weapons.Count)], itemHolder.transform.position, itemHolder.transform.rotation);
+    SpawnNewWeapon();
     CountDown.swapWeaponAction += SpawnNewWeapon;
   }
 
@@ -40,8 +41,15 @@ public class PlayerActions : MonoBehaviour
   }
   private void SpawnNewWeapon()
   {
-    Destroy(newWeapon);
-    newWeapon = Instantiate(weapons[UnityEngine.Random.Range(0, weapons.Count)], itemHolder.transform.position, itemHolder.transform.rotation);
+    if (newWeapon != null)
+      Destroy(newWeapon);
+    GameObject nextWeapon = weapons[UnityEngine.Random.Range(0, weapons.Count)];
+    UpdateWeaponUI(nextWeapon.GetComponent<Weapon>().weaponData.img, nextWeapon.GetComponent<Weapon>().weaponData.img);
+    newWeapon = Instantiate(nextWeapon, itemHolder.transform.position, itemHolder.transform.rotation);
     // swapWeaponAction?.Invoke();
+  }
+
+  private void UpdateWeaponUI(Sprite currentWeaponImg, Sprite nextWeaponImg){
+    GUIManager.Instance.UpdateWeaponDisplay(currentWeaponImg, nextWeaponImg);
   }
 }
