@@ -9,6 +9,7 @@ public class WeaponData : ScriptableObject
   public new string name;
   public bool isMelee;
   public bool isProjectile;
+  public bool hasAOE;
 
   [Header("Shooting")]
   public float damage;
