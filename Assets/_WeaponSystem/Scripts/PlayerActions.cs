@@ -49,7 +49,8 @@ public class PlayerActions : MonoBehaviour
     // swapWeaponAction?.Invoke();
   }
 
-  private void UpdateWeaponUI(Sprite currentWeaponImg, Sprite nextWeaponImg){
+  private void UpdateWeaponUI(Sprite currentWeaponImg, Sprite nextWeaponImg)
+  {
     GUIManager.Instance.UpdateWeaponDisplay(currentWeaponImg, nextWeaponImg);
   }
 }
