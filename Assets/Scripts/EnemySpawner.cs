@@ -12,7 +12,12 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag(spawnPointTag);
+       spawnEnemies();
+    }
+
+	public void spawnEnemies()
+	{
+		 GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag(spawnPointTag);
 		foreach(GameObject spawnPoint in spawnPoints){
 			int randomPrefab = Random.Range(0, prefabsToSpawn.Count);
 			if(alwaysSpawn){
@@ -26,5 +31,5 @@ public class EnemySpawner : MonoBehaviour
 				}
 			}
 		}
-    }
+	}
 }

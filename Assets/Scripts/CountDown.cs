@@ -12,6 +12,8 @@ public class CountDown : MonoBehaviour
 
   public TMP_Text TimerTxt;
 
+  public EnemySpawner spawnManager;
+
   public static Action swapWeaponAction;
 
   public GameObject playerInScene;
@@ -43,6 +45,7 @@ public class CountDown : MonoBehaviour
       else
       {
         swapWeaponAction?.Invoke();
+        spawnManager.spawnEnemies();
         timeLeft = 10f;
         // updateTimer(timeLeft); - above if statement handles the UpdateTimer method if is above 0 so just set timer to 10
       }
