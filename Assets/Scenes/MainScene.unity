@@ -3267,7 +3267,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.9815725, y: 1}
+    m_SensorSize: {x: 1.7781818, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -5541,6 +5541,7 @@ MonoBehaviour:
   timeLeft: 0
   timerOn: 0
   TimerTxt: {fileID: 1534379630}
+  spawnManager: {fileID: 0}
   playerInScene: {fileID: 0}
 --- !u!114 &224970970496040857
 MonoBehaviour:
