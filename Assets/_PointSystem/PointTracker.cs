@@ -12,6 +12,7 @@ public class PointTracker : MonoBehaviour
   void Start()
   {
     pointText = GetComponent<TMP_Text>();
+    MoreMountains.TopDownEngine.GameManager.Instance.Points = 0;
     currentPoints = MoreMountains.TopDownEngine.GameManager.Instance.Points;
   }
 
