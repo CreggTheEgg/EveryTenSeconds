@@ -175,21 +175,31 @@ namespace MoreMountains.TopDownEngine
 					break;
 
 				case DashModes.MousePosition:
-					Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
-					Debug.DrawRay(ray.origin, ray.direction * 100, Color.yellow);
-					float distance;
-					_playerPlane.SetNormalAndPosition(_playerPlane.normal, this.transform.position);
-					if (_playerPlane.Raycast(ray, out distance))
+					// Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
+					// Debug.DrawRay(ray.origin, ray.direction * 100, Color.yellow);
+					// float distance;
+					// _playerPlane.SetNormalAndPosition(_playerPlane.normal, this.transform.position);
+					// if (_playerPlane.Raycast(ray, out distance))
+					// {
+					// 	_inputDirection = ray.GetPoint(distance);
+					// }
+
+					// angle = Vector3.SignedAngle(this.transform.forward, (_inputDirection - this.transform.position).normalized, Vector3.up);
+					//_dashDestination = this.transform.position + DashDirection.normalized * DashDistance;
+					// _dashAngle.y = angle;
+
+					Ray cameraRay = _mainCamera.ScreenPointToRay(Input.mousePosition);
+					Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+					float rayLength;
+
+					if (groundPlane.Raycast(cameraRay, out rayLength))
 					{
-						_inputDirection = ray.GetPoint(distance);
+						Vector3 pointToLook = cameraRay.GetPoint(rayLength);
+						_dashDestination = pointToLook;
 					}
+					//_dashDestination = MMMaths.RotatePointAroundPivot(_dashDestination, this.transform.position, _dashAngle);
 
-					angle = Vector3.SignedAngle(this.transform.forward, (_inputDirection - this.transform.position).normalized, Vector3.up);
-					_dashDestination = this.transform.position + DashDirection.normalized * DashDistance;
-					_dashAngle.y = angle;
-					_dashDestination = MMMaths.RotatePointAroundPivot(_dashDestination, this.transform.position, _dashAngle);
-
-					_controller.CurrentDirection = (_dashDestination - this.transform.position).normalized;
+					// _controller.CurrentDirection = (_dashDestination - this.transform.position).normalized;
 					break;
 			}
 		}
@@ -227,6 +237,7 @@ namespace MoreMountains.TopDownEngine
 					_dashAnimParameterDirection = (_dashDestination - _dashOrigin).normalized;
 					if (DashSpace == DashSpaces.World)
 					{
+
 						_newPosition = Vector3.Lerp(_dashOrigin, _dashDestination, DashCurve.Evaluate(_dashTimer / DashDuration));	
 						_dashTimer += Time.deltaTime;
 						_controller.MovePosition(_newPosition);

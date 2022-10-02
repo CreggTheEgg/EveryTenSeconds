@@ -272,7 +272,7 @@ MonoBehaviour:
   AbilityPermitted: 1
   BlockingMovementStates: 
   BlockingConditionStates: 
-  DashMode: 1
+  DashMode: 3
   DashSpace: 0
   DashDirection: {x: 0, y: 0, z: 1}
   DashDistance: 10
