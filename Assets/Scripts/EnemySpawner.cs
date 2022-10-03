@@ -17,14 +17,14 @@ public class EnemySpawner : MonoBehaviour
 
 	public void spawnEnemies()
 	{
-		 GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag(spawnPointTag);
+		GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag(spawnPointTag);
 		foreach(GameObject spawnPoint in spawnPoints){
 			int randomPrefab = Random.Range(0, prefabsToSpawn.Count);
 			if(alwaysSpawn){
 				GameObject pts = Instantiate(prefabsToSpawn[randomPrefab]);
 				pts.transform.position = spawnPoint.transform.position;
 			}else{
-				int spawnOrNot = Random.Range(0, 2);
+				int spawnOrNot = Random.Range(0, 4);
 				if(spawnOrNot == 0){
 					GameObject pts = Instantiate(prefabsToSpawn[randomPrefab]);
 					pts.transform.position = spawnPoint.transform.position;
