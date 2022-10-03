@@ -38,14 +38,16 @@ public class PlayerActions : MonoBehaviour
       attackInput?.Invoke();
     }
   }
-  private void SpawnNewWeapon()
+  public void SpawnNewWeapon()
   {
     if (newWeapon != null)
       Destroy(newWeapon);
 
     GameObject nextWeapon = weapons[UnityEngine.Random.Range(0, weapons.Count)];
     UpdateWeaponUI(nextWeapon.GetComponent<Weapon>().weaponData.img);
+
     newWeapon = Instantiate(nextWeapon, itemHolder.transform.position, itemHolder.transform.rotation);
+
   }
 
   private void UpdateWeaponUI(Sprite currentWeaponImg)
