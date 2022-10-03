@@ -17,11 +17,6 @@ public class Weapon : MonoBehaviour
 
   }
 
-  public void SwingWeapon()
-  {
-
-  }
-
   public void FireWeapon()
   {
     if (weaponData.isProjectile)
@@ -32,21 +27,42 @@ public class Weapon : MonoBehaviour
       Vector3 forceToAdd = transform.forward * weaponData.throwForce + transform.up * weaponData.throwUpwardForce + projectileRb.velocity;
 
       projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
+
     }
 
     if (weaponData.isMelee)
     {
-      StartCoroutine(SwingSword());
+      // StartCoroutine(SwingSword());
+      PlayMeleeAnimation(gameObject.GetComponent<Animator>());
+    }
+
+    if (weaponData.useParticle)
+    {
+      //TODO: Play particle effect
+      ParticleSystem ps = Instantiate(weaponData.particleSystem, transform.position, transform.rotation);
+      Debug.Log("Particle Spawned");
+      weaponData.particleSystem.Play();
     }
   }
 
-  IEnumerator SwingSword()
+  // IEnumerator SwingSword()
+  // {
+  //   if (gameObject.GetComponent<Animator>() != null)
+  //   {
+  //     gameObject.GetComponent<Animator>().Play("SwingSword");
+  //     yield return new WaitForSeconds(1f);
+  //     gameObject.GetComponent<Animator>().Play("SwordIdle");
+  //   }
+  // }
+
+  public void PlayMeleeAnimation(Animator anim)
   {
+
     if (gameObject.GetComponent<Animator>() != null)
     {
-      gameObject.GetComponent<Animator>().Play("SwingSword");
-      yield return new WaitForSeconds(1f);
-      gameObject.GetComponent<Animator>().Play("SwordIdle");
+      // gameObject.GetComponent<Animator>().Play("SwingSword");
+      gameObject.GetComponent<Animator>().SetTrigger("Attack");
+      // gameObject.GetComponent<Animator>().ResetTrigger("Attack");
     }
   }
 }
