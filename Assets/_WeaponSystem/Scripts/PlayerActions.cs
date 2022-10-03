@@ -44,12 +44,12 @@ public class PlayerActions : MonoBehaviour
       Destroy(newWeapon);
 
     GameObject nextWeapon = weapons[UnityEngine.Random.Range(0, weapons.Count)];
-    UpdateWeaponUI(nextWeapon.GetComponent<Weapon>().weaponData.img, nextWeapon.GetComponent<Weapon>().weaponData.img);
+    UpdateWeaponUI(nextWeapon.GetComponent<Weapon>().weaponData.img);
     newWeapon = Instantiate(nextWeapon, itemHolder.transform.position, itemHolder.transform.rotation);
   }
 
-  private void UpdateWeaponUI(Sprite currentWeaponImg, Sprite nextWeaponImg)
+  private void UpdateWeaponUI(Sprite currentWeaponImg)
   {
-    GUIManager.Instance.UpdateWeaponDisplay(currentWeaponImg, nextWeaponImg);
+    GUIManager.Instance.UpdateWeaponDisplay(currentWeaponImg);
   }
 }

@@ -334,10 +334,9 @@ namespace MoreMountains.TopDownEngine
 			}
 		}
 
-		public virtual void UpdateWeaponDisplay(Sprite currentWeapon, Sprite nextWeapon){
+		public virtual void UpdateWeaponDisplay(Sprite currentWeapon){
 			Image[] images = WeaponHUD.GetComponentsInChildren<Image>();
 			images[0].sprite = currentWeapon;
-			images[1].sprite = nextWeapon;
 		}
 	}
 }
