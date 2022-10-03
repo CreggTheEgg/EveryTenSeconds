@@ -46,19 +46,14 @@ public class Weapon : MonoBehaviour
       weaponData.particleSystem.Play();
     }
 
-    CallAudio();
+    RandomSoundness();
   }
 
-  void CallAudio()
-  {
-    Invoke ("RandomSoundness", 10);
-  }
  
   void RandomSoundness()
   {
     audioSource.clip = weaponData.sounds[Random.Range(0, weaponData.sounds.Length)];
     audioSource.Play();
-    CallAudio();
   }
 
   // IEnumerator SwingSword()
