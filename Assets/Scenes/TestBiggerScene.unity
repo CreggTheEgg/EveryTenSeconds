@@ -6078,6 +6078,7 @@ MonoBehaviour:
   alwaysSpawn: 1
   prefabsToSpawn:
   - {fileID: 8653938547016213815, guid: 1db11741c3e4c254b892abdf0f7434ca, type: 3}
+  - {fileID: 8653938547016213815, guid: 4c3bff3b57a10df458a4fd84f20fa88d, type: 3}
 --- !u!1001 &1246121949
 PrefabInstance:
   m_ObjectHideFlags: 0
