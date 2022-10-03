@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Staff
   isMelee: 1
   isProjectile: 0
+  hasAOE: 0
   damage: 0
   maxDistance: 0
   throwForce: 0
@@ -24,5 +25,11 @@ MonoBehaviour:
   fireRate: 0
   reloadTime: 0
   projectile: {fileID: 0}
+  useParticle: 0
+  particleSystem: {fileID: 0}
   reloading: 0
   img: {fileID: 21300000, guid: 9e9084ddaa1a3884e9716fe9d8053754, type: 3}
+  sounds:
+  - {fileID: 8300000, guid: e6c79b7a61d6a424c8a8d2e889f3018e, type: 3}
+  - {fileID: 8300000, guid: 77f5c674952359e4a9d5beb3b03bdf87, type: 3}
+  - {fileID: 8300000, guid: e0bab816a2b4059478c7087ec70061ea, type: 3}
