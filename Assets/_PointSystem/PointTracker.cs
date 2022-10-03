@@ -20,9 +20,6 @@ public class PointTracker : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    Debug.Log("TimerPoints "+ timerPoints);
-    Debug.Log("Game engine points "+ MoreMountains.TopDownEngine.GameManager.Instance.Points);
-    Debug.Log("Total Points "+timerPoints + MoreMountains.TopDownEngine.GameManager.Instance.Points);
     currentPoints = timerPoints + MoreMountains.TopDownEngine.GameManager.Instance.Points;
 
     if (pointText != null)

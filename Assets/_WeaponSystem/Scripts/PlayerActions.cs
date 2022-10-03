@@ -27,10 +27,10 @@ public class PlayerActions : MonoBehaviour
     // currentWeapon = newWeapon;
 
     // test weapon swap with keybind for quick testing
-    if (Input.GetKeyDown(KeyCode.E))
-    {
-      SpawnNewWeapon();
-    }
+    // if (Input.GetKeyDown(KeyCode.E))
+    // {
+    //   SpawnNewWeapon();
+    // }
 
     // Player input to attack with weapon
     if (Input.GetMouseButtonDown(0))
