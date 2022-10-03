@@ -3996,6 +3996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointText: {fileID: 0}
   currentPoints: 0
+  timerPoints: 0
 --- !u!1001 &358257074
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27002,6 +27003,7 @@ MonoBehaviour:
   clockOn: 0
   ClockText: {fileID: 1645571975}
   startTime: 0
+  pointTracker: {fileID: 345837761}
 --- !u!224 &224985361725599211
 RectTransform:
   m_ObjectHideFlags: 0

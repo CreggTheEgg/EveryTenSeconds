@@ -11,6 +11,7 @@ public class Clock : MonoBehaviour
 
     public TMP_Text ClockText;
     public float startTime = 0f;
+    public PointTracker pointTracker;
 
     void Start()
     {
@@ -35,5 +36,7 @@ public class Clock : MonoBehaviour
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
         ClockText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+
+        pointTracker.AddTimerPoints((int)minutes * 50);
     }
 }

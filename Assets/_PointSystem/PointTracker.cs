@@ -7,6 +7,7 @@ public class PointTracker : MonoBehaviour
 {
   public TMP_Text pointText;
   public int currentPoints = 0;
+  public int timerPoints = 0;
 
   // Start is called before the first frame update
   void Start()
@@ -19,7 +20,10 @@ public class PointTracker : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    currentPoints = MoreMountains.TopDownEngine.GameManager.Instance.Points;
+    Debug.Log("TimerPoints "+ timerPoints);
+    Debug.Log("Game engine points "+ MoreMountains.TopDownEngine.GameManager.Instance.Points);
+    Debug.Log("Total Points "+timerPoints + MoreMountains.TopDownEngine.GameManager.Instance.Points);
+    currentPoints = timerPoints + MoreMountains.TopDownEngine.GameManager.Instance.Points;
 
     if (pointText != null)
     {
@@ -29,5 +33,10 @@ public class PointTracker : MonoBehaviour
     {
       pointText.text = "MISSING TEXT OBJECT";
     }
+  }
+
+  public void AddTimerPoints(int totalTime)
+  {
+    timerPoints = totalTime;
   }
 }
