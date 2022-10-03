@@ -6,10 +6,12 @@ public class Weapon : MonoBehaviour
 {
   [Header("References")]
   public WeaponData weaponData;
+  public AudioSource audioSource;
 
   private void Start()
   {
     PlayerActions.attackInput = FireWeapon;
+    audioSource = gameObject.GetComponent<AudioSource>();
   }
 
   private void Update()
@@ -43,6 +45,20 @@ public class Weapon : MonoBehaviour
       Debug.Log("Particle Spawned");
       weaponData.particleSystem.Play();
     }
+
+    CallAudio();
+  }
+
+  void CallAudio()
+  {
+    Invoke ("RandomSoundness", 10);
+  }
+ 
+  void RandomSoundness()
+  {
+    audioSource.clip = weaponData.sounds[Random.Range(0, weaponData.sounds.Length)];
+    audioSource.Play();
+    CallAudio();
   }
 
   // IEnumerator SwingSword()

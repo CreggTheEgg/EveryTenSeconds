@@ -35,4 +35,7 @@ public class WeaponData : ScriptableObject
 
   [Header("Sprite")]
   public Sprite img;
+
+  [Header("Sound")]
+  public AudioClip[] sounds;
 }
