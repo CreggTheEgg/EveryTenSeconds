@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu Scene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/TestBiggerScene.unity
-    guid: 4a4b652de2b47b245acb27a163860f61
+    path: Assets/Scenes/BiggerSceneWithStructures.unity
+    guid: f84e5c014e100fa45acc43dc6d2a3b81
   - enabled: 1
     path: Assets/Asset Packs/TopDownEngine/ThirdParty/MoreMountains/MMTools/Tools/MMSceneLoading/LoadingScreens/LoadingScreen.unity
     guid: 888394d52616e5e42b3b54c3f2bbd3eb
