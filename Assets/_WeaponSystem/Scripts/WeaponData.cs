@@ -26,6 +26,10 @@ public class WeaponData : ScriptableObject
   [Header("Projectile")]
   public GameObject projectile;
 
+  [Header("Particle Effects")]
+  public bool useParticle;
+  public ParticleSystem particleSystem;
+
   [HideInInspector]
   public bool reloading;
 
